@@ -1,0 +1,92 @@
+﻿@page "/"
+
+<PageTitle>About</PageTitle>
+
+<h1>About the Snake Client</h1>
+
+<p>
+    Welcome to my <strong>CS 3500 Snake Client</strong>! This page will help new users
+    (and the course staff) understand how to run and use this client, as well as outline
+    any special or additional features implemented.
+</p>
+
+<img src="images/IMG_0657 2.png" alt="Ni hao bruzz" width="300" />
+
+<h2>How to Use the Client</h2>
+<ul>
+    <li>
+        <strong>Setup:</strong> Launch the Snake server (provided by the instructors) on your machine or network.
+        Typically, it uses port <em>11000</em>.
+    </li>
+    <li>
+        <strong>Enter Connection Details:</strong> On the main Snake page, enter
+        the <em>Host</em> (e.g., "localhost"), <em>Port</em> (11000 or whichever you prefer),
+        and a short <em>Player Name</em>.
+    </li>
+    <li>
+        <strong>Connect:</strong> Click <em>Connect</em> to establish a connection with the server.
+        The client will fetch the assigned Snake ID, walls, and world size before starting the continuous update loop.
+    </li>
+    <li>
+        <strong>Controls:</strong> Use your keyboard (<em>W, A, S, D</em> or the arrow keys) to move your snake around.
+        Each key press sends a turn command to the server.
+    </li>
+    <li>
+        <strong>Gameplay:</strong> 
+        <ul>
+            <li>The canvas centers on your snake’s head as it moves.</li>
+            <li>Walls are rendered as sprite images rather than simple lines.</li>
+            <li>Powerups appear as small circles. Gathering them increases your score.</li>
+            <li>Snakes that die display an <em>exploding</em> animation (extra feature).</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Additional Features</h2>
+<ul>
+    <li><strong>Explosion Animation:</strong> 
+        When a snake dies, a colorful explosion is rendered at its final position for a few frames. 
+        This adds a distinctive effect beyond the basic Snake mechanics.
+    </li>
+    <li><strong>Names and Score Tracker</strong>
+        Shows the name of the player and score accumulated for UX polish.
+    </li>
+    <li><strong>Meme About Page:</strong>
+        There is also a funny shrek picture 
+        </li>
+</ul>
+
+<h2>Known Limitations / Future Enhancements</h2>
+<ul>
+    <li>
+        Currently, you must close the browser or stop the app to disconnect. 
+        A <em>Disconnect</em> button could be added for a cleaner user experience.
+    </li>
+</ul>
+
+<h2>Code Architecture</h2>
+<p>
+    The client follows an MVC-like separation:
+</p>
+<ul>
+    <li><strong>Models (in <code>GUI.Client.Models</code>).</strong> Contains classes like <code>World</code>, 
+        <code>Snake</code>, <code>Powerup</code>, etc., which represent game entities.
+    </li>
+    <li><strong>Controllers (in <code>GUI.Client.Controllers</code>).</strong> 
+        Handles networking logic (<code>NetworkConnection</code>, <code>NetworkController</code>).
+    </li>
+    <li><strong>View (the Blazor .razor pages).</strong> 
+        Renders the canvas, handles user input, and updates the display based on the Models.
+    </li>
+</ul>
+
+<h2>Summary</h2>
+<p>
+    This Snake client demonstrates real-time multiplayer gameplay using a Blazor Canvas. 
+    Enjoy controlling your snake, collecting powerups, and watching <strong>colorful explosions</strong> whenever a snake dies. 
+    If you have any questions about the implementation, please see the inline XML documentation in the codebase.
+</p>
+
+<p>
+    <em>Thank you for checking out my Snake Client! Have fun!</em>
+</p>
