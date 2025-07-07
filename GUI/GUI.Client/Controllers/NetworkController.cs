@@ -45,7 +45,7 @@ namespace GUI.Client
         /// Connection string used to access the MySQL database.
         /// </summary>
         public const string connectionString =
-            "server=atr.eng.utah.edu;database=u1459474;uid=u1459474;password=Leospassword;";
+            "server=snakegame-db.clmai4aqc81w.ap-southeast-2.rds.amazonaws.com;database=snakegame;uid=admin;password=snakegame;";
 
         /// <summary>
         /// ID of the current game session, assigned after inserting the game row.

@@ -13,7 +13,7 @@ public static class WebServer
     /// <summary>
     /// MySQL connection string used to connect to the game database.
     /// </summary>
-    private const string ConnStr = "server=atr.eng.utah.edu;dat3can11abase=u1459474;uid=u1459474;password=Leospassword;";
+    private const string ConnStr = "server=snakegame-db.clmai4aqc81w.ap-southeast-2.rds.amazonaws.com;database=snakegame;uid=admin;password=snakegame;";
 
     /// <summary>
     /// Entry point for the web server. Starts the server and listens for incoming connections.
